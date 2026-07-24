@@ -12,14 +12,18 @@ During implementation, I encountered a 502 Bad Gateway issue caused by an incorr
                      Client
                         │
                         ▼
+            +---------------------+
             |  Nginx Load Balancer|
             |      (stlb01)       |
+            +----------+----------+
                        │
         ┌──────────────┼──────────────┐
         │              │              │
         ▼              ▼              ▼
+ +-------------+ +-------------+ +-------------+
  |   stapp01   | |   stapp02   | |   stapp03   |
  | Apache HTTPD| | Apache HTTPD| | Apache HTTPD|
+ +-------------+ +-------------+ +-------------+
 
 ## Tech Stacks
 
